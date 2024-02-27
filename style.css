@@ -30,39 +30,39 @@ html {
     cursor: pointer;
     transform: translateX(-40%) scale(1.05);
   }
-  .code-warszawa {
+  .plot-1 {
     bottom: 55.9282%;
     left: 65.5994%;
   }
-  .code-gdansk {
+  .plot-2 {
     bottom: 89.858%;
     left: 45.716%;
   }
-  .code-kalisz {
+  .plot-3 {
     bottom: 45.2392%;
     left: 39.4641%;
   }
-  .code-kielce {
+  .plot-4 {
     bottom: 27.9065%;
     left: 62.2945%;
   }
-  .code-konin {
+  .plot-5 {
     bottom: 53.4868%;
     left: 41.3139%;
   }
-  .code-krakow {
+  .plot-6 {
     bottom: 14.1059%;
     left: 57.1113%;
   }
-  .code-ostrow-wielkopolski {
+  .plot-7 {
     bottom: 43.573%;
     left: 36.9038%;
   }
-  .code-poznan {
+  .plot-8 {
     bottom: 56.831%;
     left: 31.9521%;
   }
-  .code-wroclaw {
+  .plot-9 {
     bottom: 33.6384%;
     left: 32.7036%;
   }
