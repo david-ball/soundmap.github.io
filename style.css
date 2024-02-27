@@ -22,13 +22,10 @@ html {
     height: 5%;
     background: url('http://www.clker.com/cliparts/W/0/g/a/W/E/map-pin-red.svg') no-repeat center center;
     background-size: contain;
-    transform: translateX(-50%) translateY(0);
     filter: brightness(1) contrast(1.1);
-    transition: all .3s ease;
   }
   .rpin:hover {
     cursor: pointer;
-    transform: translateY(-40%) scale(1.05);
   }
   .plot-1 {
     bottom: 55.9282%;
