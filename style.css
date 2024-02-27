@@ -2,9 +2,67 @@ html {
     background-color: black;
 }
 
-section#map {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('map-test.jpg');
+
+.map {
+    display: inline-block;
+    margin: 1em auto;
     position: relative;
+    border:1px solid grey;
+  }
+
+.map img {
+    max-width:100%;
+  display: block;
 }
+
+.rpin {
+    position: absolute;
+    display: block;
+    width: 5%;
+    height: 5%;
+    background: url('http://www.clker.com/cliparts/W/0/g/a/W/E/map-pin-red.svg') no-repeat center center;
+    background-size: contain;
+    transform: translateX(-50%) translateY(0);
+    filter: brightness(1) contrast(1.1);
+    transition: all .3s ease;
+  }
+  .rpin:hover {
+    cursor: pointer;
+    transform: translateX(-40%) scale(1.05);
+  }
+  .code-warszawa {
+    bottom: 55.9282%;
+    left: 65.5994%;
+  }
+  .code-gdansk {
+    bottom: 89.858%;
+    left: 45.716%;
+  }
+  .code-kalisz {
+    bottom: 45.2392%;
+    left: 39.4641%;
+  }
+  .code-kielce {
+    bottom: 27.9065%;
+    left: 62.2945%;
+  }
+  .code-konin {
+    bottom: 53.4868%;
+    left: 41.3139%;
+  }
+  .code-krakow {
+    bottom: 14.1059%;
+    left: 57.1113%;
+  }
+  .code-ostrow-wielkopolski {
+    bottom: 43.573%;
+    left: 36.9038%;
+  }
+  .code-poznan {
+    bottom: 56.831%;
+    left: 31.9521%;
+  }
+  .code-wroclaw {
+    bottom: 33.6384%;
+    left: 32.7036%;
+  }
