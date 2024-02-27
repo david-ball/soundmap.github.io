@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audio Map Prototype</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
     <script>
+      if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+      } else {
+        // `DOMContentLoaded` has already fired
+        onDOMContentLoaded();
+      }
+
+      function onDOMContentLoaded() {
+        document
+          .querySelectorAll(".rpin")
+          .forEach((el) => el.addEventListener("click", onMouseEnterPin));
+      }
+
+      function onMouseEnterPin(e) {
+        const src = e.target.dataset.audiosrc;
+        if (!src) return;
         var sound = new Howl({
-            src: ['audio-1.mp3']
+          src,
         });
         sound.play();
+      }
     </script>
-</head>
-<body>
-    
-  <div class="map"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pleasant_View_housing_development%2C_Missoula%2C_Montana_-_panoramio.jpg/1080px-Pleasant_View_housing_development%2C_Missoula%2C_Montana_-_panoramio.jpg" alt="">
-    <a class="rpin plot-1"></a>
-    <a class="rpin plot-2"></a>
-    <a class="rpin plot-3"></a>
-    <a class="rpin plot-4"></a>
-    <a class="rpin plot-5"></a>
-    <a class="rpin plot-6"></a>
-    <a class="rpin plot-7"></a>
-    <a class="rpin plot-8"></a>
-    <a class="rpin plot-9"></a>
-      </div>
-  
-</body>
+  </head>
+  <body>
+    <div class="map">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Pleasant_View_housing_development%2C_Missoula%2C_Montana_-_panoramio.jpg/1080px-Pleasant_View_housing_development%2C_Missoula%2C_Montana_-_panoramio.jpg"
+        alt=""
+      />
+      <a
+        class="rpin plot-1"
+        onmouseenter="onMouseEnterPin"
+        data-audiosrc="audio-1.mp3"
+      ></a>
+      <a class="rpin plot-2"></a>
+      <a class="rpin plot-3"></a>
+      <a class="rpin plot-4"></a>
+      <a class="rpin plot-5"></a>
+      <a class="rpin plot-6"></a>
+      <a class="rpin plot-7"></a>
+      <a class="rpin plot-8"></a>
+      <a class="rpin plot-9"></a>
+    </div>
+  </body>
 </html>
