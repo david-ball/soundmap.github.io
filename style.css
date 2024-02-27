@@ -28,7 +28,7 @@ html {
   }
   .rpin:hover {
     cursor: pointer;
-    transform: translateY(40%) scale(1.05);
+    transform: translateY(-40%) scale(1.05);
   }
   .plot-1 {
     bottom: 55.9282%;
